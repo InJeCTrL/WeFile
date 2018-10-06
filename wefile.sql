@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.4.15.10
 -- https://www.phpmyadmin.net
 --
@@ -45,13 +45,13 @@ WHERE RestTime = 0$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `GetPageNum_PRI`(IN `_key` TINYTEXT)
     NO SQL
-SELECT floor((COUNT(*)-1)/5)+1 AS NUM
+SELECT floor(abs(COUNT(*)-1)/5)+1 AS NUM
 FROM file
 WHERE IsPublic=0 AND PrivateKey=_key AND RestTime > 0$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `GetPageNum_PUB`(IN `_FName` TINYTEXT)
     READS SQL DATA
-SELECT floor((COUNT(*)-1)/5)+1 AS NUM
+SELECT floor(abs(COUNT(*)-1)/5)+1 AS NUM
 FROM file
 WHERE IsPublic = 1 AND Name LIKE CONCAT('%',_FName,'%') AND RestTime > 0$$
 
