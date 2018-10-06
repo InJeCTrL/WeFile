@@ -1,9 +1,9 @@
-﻿-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 4.4.15.10
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2018-10-06 21:46:29
+-- Generation Time: 2018-10-07 01:49:51
 -- 服务器版本： 5.6.37-log
 -- PHP Version: 5.4.45
 
@@ -122,24 +122,7 @@ CREATE TABLE IF NOT EXISTS `file` (
   `IsPublic` tinyint(1) DEFAULT '1',
   `PrivateKey` tinytext NOT NULL,
   `Ready` tinyint(1) DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
-
---
--- 转存表中的数据 `file`
---
-
-INSERT INTO `file` (`ID`, `Name`, `Unit`, `UpTime`, `Size`, `RestTime`, `Addition`, `IsPublic`, `PrivateKey`, `Ready`) VALUES
-(29, '测试文本.txt', 'B', '2018-10-06 13:33:50', 10, 17, '', 1, '', 1),
-(27, '测试文本.txt', 'B', '2018-10-06 13:33:49', 10, 17, '', 1, '', 1),
-(28, '测试文本.txt', 'B', '2018-10-06 13:33:50', 10, 17, '', 1, '', 1),
-(26, '测试文本.txt', 'B', '2018-10-06 13:33:49', 10, 17, '', 1, '', 1),
-(25, '测试文本.txt', 'B', '2018-10-06 13:33:49', 10, 17, '', 1, '', 1),
-(24, '测试文本.txt', 'B', '2018-10-06 13:33:49', 10, 17, '', 1, '', 1),
-(23, '测试文本.txt', 'B', '2018-10-06 13:33:48', 10, 17, '', 1, '', 1),
-(30, '测试文本.txt', 'B', '2018-10-06 13:33:50', 10, 17, '', 1, '', 1),
-(31, '测试文本.txt', 'B', '2018-10-06 13:33:50', 10, 17, '', 1, '', 1),
-(32, '测试文本.txt', 'B', '2018-10-06 13:33:50', 10, 17, '', 1, '', 1),
-(33, '测试文本.txt', 'B', '2018-10-06 13:33:50', 10, 17, '', 1, '', 1);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Indexes for dumped tables
@@ -159,7 +142,7 @@ ALTER TABLE `file`
 -- AUTO_INCREMENT for table `file`
 --
 ALTER TABLE `file`
-  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=34;
+  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 DELIMITER $$
 --
 -- 事件
