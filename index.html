@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>WeFile</title>
+		<link rel="stylesheet" href="Style.css" type="text/css" />
+	</head>
+	<body bgcolor="aquamarine">
+		<table>
+			<tr>
+				<td colspan="2" class="Head">
+					<h1>WeFile!</h1>
+					<h3>随时随地，存取文件！</h3>
+				</td>
+			</tr>
+			<tr>
+				<td class="Menu">
+					<a href="ViewPublic.php?page=1&FName=" target="InfoShow">查看公开文件</a>
+					<br />
+					<br />
+					<br />
+					<a href="ViewPrivate.php?page=1&key=" target="InfoShow">查看私密文件</a>
+					<br />
+					<br />
+					<br />
+					<a href="Upload.html" target="InfoShow">上传文件</a>
+				</td>
+				<td class="InfShow">
+					<iframe name="InfoShow" src="ViewPublic.php?page=1&FName=" frameborder="no" height="100%" width="100%"></iframe>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="Bottom">
+					上传文件大小限制：不大于 1 GB
+					<br />
+					上传的文件只保存三十分钟，三十分钟后自动删除！
+				</td>
+			</tr>
+		</table>
+
+	</body>
+</html>

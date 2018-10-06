@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="DoUpload.php" method="post" enctype="multipart/form-data" target="UpProgress">
+			<input type="file" name="UpFile" />
+			<br />
+			<br />
+			备注信息：<input type="text" name="Addition" />
+			<br />
+			<br />
+			<input type="radio" name="SelectType" value="1" checked="checked" />公开文件
+			<input type="radio" name="SelectType" value="0" />私密文件
+			<input type="submit" value="上传" />
+		</form>
+		<iframe name="UpProgress" src="DoUpload.php" frameborder="no"></iframe>
+	</body>
+</html>
