@@ -43,6 +43,7 @@
 				<td>
 					<form action="ViewPrivate.php" method="post">
 						<input type="hidden" value=<?php echo $page-1; ?> name="page" />
+						<input type="hidden" value=<?php echo "'" . $key . "'"; ?> name="key" />
 						<input type="submit" value="上一页" <?php 
 															if ($page == 1)
 																echo("disabled='disabled'");
@@ -52,6 +53,7 @@
 				<td>
 					<form action="ViewPrivate.php" method="post">
 						<input type="hidden" value=<?php echo $page+1; ?> name="page" />
+						<input type="hidden" value=<?php echo "'" . $key . "'"; ?> name="key" />
 						<input type="submit" value="下一页" <?php
 															$link = mysqli_connect('localhost','Guest','aisdug9-=1-3434u');//连接数据库
 															mysqli_set_charset($link, 'utf8');//设置字符集
